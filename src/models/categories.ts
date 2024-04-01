@@ -1,4 +1,4 @@
-import { DataType, Model } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import connect from "../dataBase/sequelize";
 
 const sequelize = connect
