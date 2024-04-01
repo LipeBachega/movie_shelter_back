@@ -32,3 +32,5 @@ NewPasswords.init({
 }, { sequelize, modelName: "new_passsword" })
 
 NewPasswords.sync()
+
+export default NewPasswords

@@ -10,3 +10,5 @@ class Directors extends Model {
 Directors.init({}, { sequelize, modelName: "director" })
 
 Directors.sync()
+
+export default Directors

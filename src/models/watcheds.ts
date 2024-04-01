@@ -3,10 +3,12 @@ import connect from "../dataBase/sequelize";
 
 const sequelize = connect
 
-class watcheds extends Model {
+class Watcheds extends Model {
 
 }
 
-watcheds.init({}, { sequelize, modelName: "watched" })
+Watcheds.init({}, { sequelize, modelName: "watched" })
 
-watcheds.sync()
+Watcheds.sync()
+
+export default Watcheds

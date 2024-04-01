@@ -10,3 +10,5 @@ class Rates extends Model {
 Rates.init({}, { sequelize, modelName: "rate" })
 
 Rates.sync()
+
+export default Rates

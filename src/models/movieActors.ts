@@ -10,3 +10,5 @@ class MovieActors extends Model {
 MovieActors.init({}, { sequelize, modelName: "movie_actors" })
 
 MovieActors.sync()
+
+export default MovieActors

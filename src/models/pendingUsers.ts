@@ -38,3 +38,5 @@ PendingUsers.init({
 }, { sequelize, modelName: "pending_user" })
 
 PendingUsers.sync()
+
+export default PendingUsers

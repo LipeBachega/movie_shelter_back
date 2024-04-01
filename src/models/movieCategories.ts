@@ -10,3 +10,5 @@ class MovieCategories extends Model {
 MovieCategories.init({}, { sequelize, modelName: "movie_category" })
 
 MovieCategories.sync()
+
+export default MovieCategories
