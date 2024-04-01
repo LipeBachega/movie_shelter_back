@@ -1,26 +1,27 @@
 import { DataTypes, Model } from "sequelize";
 import connect from "../dataBase/sequelize";
 
-const sequelize = connect
+const sequelize = connect;
 
-class Directors extends Model {
+class Directors extends Model {}
 
-}
-
-Directors.init({
+Directors.init(
+  {
     director_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
     },
 
     director_name: {
-        type: DataTypes.STRING,
-        allowNull: false
-    }
-}, { sequelize, modelName: "director" })
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  },
+  { sequelize, modelName: "director" }
+);
 
-Directors.sync()
+Directors.sync();
 
-export default Directors
+export default Directors;
