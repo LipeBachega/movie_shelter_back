@@ -1,7 +1,9 @@
 import fastify from "fastify";
+import connect from "./dataBase/sequelize";
 
 
 const port: number = 3000
+const sequelize = connect
 
 const server = fastify()
 
@@ -9,7 +11,7 @@ const server = fastify()
 
 server.get('/listen', async (req, res) => {
     return res.status(200).send(`Vc entrou na rota de escutar: ${port}`)
- })
+})
 
 
 server.listen({ port: port }, (err) => {
@@ -21,3 +23,4 @@ server.listen({ port: port }, (err) => {
     console.log(`Escutando na porta: ${port}`);
 
 })
+
