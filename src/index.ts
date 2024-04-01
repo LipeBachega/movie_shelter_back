@@ -1,5 +1,4 @@
 import fastify from "fastify";
-import connect from "./dataBase/sequelize";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -7,14 +6,11 @@ dotenv.config();
 const envPort: string = process.env.FASTIFY_PORT ?? "";
 
 if (!envPort) {
-  console.log(
-    "As variáveis de ambiente de conexão não estão configuradas corretamente."
-  );
+  console.log("A variável de ambiente port não está configurada corretamente.");
   process.exit(1);
 }
 
 const port: number = parseInt(envPort);
-const sequelize = connect;
 
 const server = fastify();
 
