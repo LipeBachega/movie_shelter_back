@@ -7,7 +7,19 @@ class Directors extends Model {
 
 }
 
-Directors.init({}, { sequelize, modelName: "director" })
+Directors.init({
+    director_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+
+    director_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+}, { sequelize, modelName: "director" })
 
 Directors.sync()
 
