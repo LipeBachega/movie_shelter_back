@@ -7,6 +7,22 @@ class Actors extends Model {
 
 }
 
-Actors.init({}, { sequelize, modelName: "actor" })
+Actors.init({
+    actor_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+
+    actor_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+
+
+}, { sequelize, modelName: "actor", timestamps: false })
 
 Actors.sync()
+
+export default Actors
